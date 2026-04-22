@@ -42,4 +42,6 @@ app.delete('/produtos/:id', async (req, res) => {
   res.json({ ok: true });
 });
 
-app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Servidor rodando');
+});

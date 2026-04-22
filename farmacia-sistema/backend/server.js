@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://sistema-farmacia-validade:<db_password>Farm@ci@26/?appName=Cluster0');
+mongoose.connect( 'mongodb+srv://nauemoreira_db_user:<db_password>@cluster1.sv7ppla.mongodb.net/?appName=Cluster1/');
 
 const Produto = mongoose.model('Produto', {
   codigo: String,

@@ -41,7 +41,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
 async function carregar() {
-  const res = await fetch('http://localhost:3000/produtos/' + id);
+  const res = await fetch('https://controle-validade-900q.onrender.com' + id);
   const p = await res.json();
 
   codigo.value = p.codigo;
@@ -54,7 +54,7 @@ async function carregar() {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  await fetch('http://localhost:3000/produtos/' + id, {
+  await fetch('https://controle-validade-900q.onrender.com' + id, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

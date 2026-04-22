@@ -39,7 +39,7 @@
 document.getElementById('form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  await fetch('http://localhost:3000/produtos', {
+  await fetch('https://controle-validade-900q.onrender.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

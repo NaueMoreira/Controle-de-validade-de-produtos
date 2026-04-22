@@ -21,7 +21,7 @@
 let todosProdutos = [];
 
 async function carregar() {
-  const res = await fetch('http://localhost:3000/produtos');
+  const res = await fetch('https://controle-validade-900q.onrender.com/produtos');
   todosProdutos = await res.json();
   exibirProdutos(todosProdutos);
 }
@@ -54,7 +54,7 @@ document.getElementById('filtro-input').addEventListener('input', (e) => {
 });
 
 async function excluir(id) {
-  await fetch('http://localhost:3000/produtos/' + id, {
+  await fetch('https://controle-validade-900q.onrender.com' + id, {
     method: 'DELETE'
   });
   carregar();

@@ -16,6 +16,10 @@ const Produto = mongoose.model('Produto', {
   sessao: String
 });
 
+app.get('/', (req, res) => {
+  res.send('API funcionando 🚀');
+});
+
 app.post('/produtos', async (req, res) => {
   const produto = new Produto(req.body);
   await produto.save();
